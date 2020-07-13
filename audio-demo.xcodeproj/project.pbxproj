@@ -13,6 +13,41 @@
 		85020E8924BC0499004440D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85020E8824BC0499004440D1 /* Assets.xcassets */; };
 		85020E8C24BC0499004440D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85020E8B24BC0499004440D1 /* Preview Assets.xcassets */; };
 		85020E8F24BC0499004440D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85020E8D24BC0499004440D1 /* LaunchScreen.storyboard */; };
+		85020EC224BC0ABA004440D1 /* AudioClockDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020E9824BC0ABA004440D1 /* AudioClockDirector.swift */; };
+		85020EC324BC0ABA004440D1 /* SAPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020E9924BC0ABA004440D1 /* SAPlayer.swift */; };
+		85020EC424BC0ABA004440D1 /* DownloadProgressDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020E9A24BC0ABA004440D1 /* DownloadProgressDirector.swift */; };
+		85020EC524BC0ABA004440D1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020E9C24BC0ABA004440D1 /* Constants.swift */; };
+		85020EC624BC0ABA004440D1 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020E9D24BC0ABA004440D1 /* Date.swift */; };
+		85020EC724BC0ABA004440D1 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020E9E24BC0ABA004440D1 /* Log.swift */; };
+		85020EC824BC0ABA004440D1 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020E9F24BC0ABA004440D1 /* Data.swift */; };
+		85020EC924BC0ABA004440D1 /* DirectorThreadSafeClosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EA024BC0ABA004440D1 /* DirectorThreadSafeClosures.swift */; };
+		85020ECA24BC0ABA004440D1 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EA124BC0ABA004440D1 /* URL.swift */; };
+		85020ECB24BC0ABA004440D1 /* SALockScreenInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EA224BC0ABA004440D1 /* SALockScreenInfo.swift */; };
+		85020ECC24BC0ABA004440D1 /* SAPlayerUpdateSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EA324BC0ABA004440D1 /* SAPlayerUpdateSubscription.swift */; };
+		85020ECD24BC0ABA004440D1 /* SAPlayerDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EA424BC0ABA004440D1 /* SAPlayerDownloader.swift */; };
+		85020ECE24BC0ABA004440D1 /* SAPlayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EA524BC0ABA004440D1 /* SAPlayerDelegate.swift */; };
+		85020ECF24BC0ABA004440D1 /* LockScreenViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EA624BC0ABA004440D1 /* LockScreenViewProtocol.swift */; };
+		85020ED024BC0ABA004440D1 /* AudioDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EA824BC0ABA004440D1 /* AudioDataManager.swift */; };
+		85020ED124BC0ABA004440D1 /* AudioStreamWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EAA24BC0ABA004440D1 /* AudioStreamWorker.swift */; };
+		85020ED224BC0ABA004440D1 /* StreamProgressDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EAB24BC0ABA004440D1 /* StreamProgressDTO.swift */; };
+		85020ED324BC0ABA004440D1 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EAD24BC0ABA004440D1 /* FileStorage.swift */; };
+		85020ED424BC0ABA004440D1 /* AudioDownloadWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EAE24BC0ABA004440D1 /* AudioDownloadWorker.swift */; };
+		85020ED524BC0ABA004440D1 /* StreamProgressPTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EAF24BC0ABA004440D1 /* StreamProgressPTO.swift */; };
+		85020ED624BC0ABA004440D1 /* AudioDiskEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EB124BC0ABA004440D1 /* AudioDiskEngine.swift */; };
+		85020ED724BC0ABA004440D1 /* AudioStreamEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EB224BC0ABA004440D1 /* AudioStreamEngine.swift */; };
+		85020ED824BC0ABA004440D1 /* AudioConverterListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EB424BC0ABA004440D1 /* AudioConverterListener.swift */; };
+		85020ED924BC0ABA004440D1 /* AudioConverterErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EB524BC0ABA004440D1 /* AudioConverterErrors.swift */; };
+		85020EDA24BC0ABA004440D1 /* AudioConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EB624BC0ABA004440D1 /* AudioConverter.swift */; };
+		85020EDB24BC0ABA004440D1 /* SAAudioAvailabilityRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EB724BC0ABA004440D1 /* SAAudioAvailabilityRange.swift */; };
+		85020EDC24BC0ABA004440D1 /* SAPlayingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EB824BC0ABA004440D1 /* SAPlayingStatus.swift */; };
+		85020EDD24BC0ABA004440D1 /* AudioParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EBA24BC0ABA004440D1 /* AudioParser.swift */; };
+		85020EDE24BC0ABA004440D1 /* AudioParsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EBB24BC0ABA004440D1 /* AudioParsable.swift */; };
+		85020EDF24BC0ABA004440D1 /* AudioParserPropertyListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EBC24BC0ABA004440D1 /* AudioParserPropertyListener.swift */; };
+		85020EE024BC0ABA004440D1 /* AudioParserPacketListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EBD24BC0ABA004440D1 /* AudioParserPacketListener.swift */; };
+		85020EE124BC0ABA004440D1 /* AudioParserErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EBE24BC0ABA004440D1 /* AudioParserErrors.swift */; };
+		85020EE224BC0ABA004440D1 /* AudioThrottler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EBF24BC0ABA004440D1 /* AudioThrottler.swift */; };
+		85020EE324BC0ABA004440D1 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EC024BC0ABA004440D1 /* AudioEngine.swift */; };
+		85020EE424BC0ABA004440D1 /* SAPlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85020EC124BC0ABA004440D1 /* SAPlayerPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +59,41 @@
 		85020E8B24BC0499004440D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85020E8E24BC0499004440D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85020E9024BC0499004440D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85020E9824BC0ABA004440D1 /* AudioClockDirector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioClockDirector.swift; sourceTree = "<group>"; };
+		85020E9924BC0ABA004440D1 /* SAPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAPlayer.swift; sourceTree = "<group>"; };
+		85020E9A24BC0ABA004440D1 /* DownloadProgressDirector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadProgressDirector.swift; sourceTree = "<group>"; };
+		85020E9C24BC0ABA004440D1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		85020E9D24BC0ABA004440D1 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		85020E9E24BC0ABA004440D1 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		85020E9F24BC0ABA004440D1 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		85020EA024BC0ABA004440D1 /* DirectorThreadSafeClosures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorThreadSafeClosures.swift; sourceTree = "<group>"; };
+		85020EA124BC0ABA004440D1 /* URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		85020EA224BC0ABA004440D1 /* SALockScreenInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALockScreenInfo.swift; sourceTree = "<group>"; };
+		85020EA324BC0ABA004440D1 /* SAPlayerUpdateSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAPlayerUpdateSubscription.swift; sourceTree = "<group>"; };
+		85020EA424BC0ABA004440D1 /* SAPlayerDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAPlayerDownloader.swift; sourceTree = "<group>"; };
+		85020EA524BC0ABA004440D1 /* SAPlayerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAPlayerDelegate.swift; sourceTree = "<group>"; };
+		85020EA624BC0ABA004440D1 /* LockScreenViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockScreenViewProtocol.swift; sourceTree = "<group>"; };
+		85020EA824BC0ABA004440D1 /* AudioDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioDataManager.swift; sourceTree = "<group>"; };
+		85020EAA24BC0ABA004440D1 /* AudioStreamWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioStreamWorker.swift; sourceTree = "<group>"; };
+		85020EAB24BC0ABA004440D1 /* StreamProgressDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamProgressDTO.swift; sourceTree = "<group>"; };
+		85020EAD24BC0ABA004440D1 /* FileStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
+		85020EAE24BC0ABA004440D1 /* AudioDownloadWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioDownloadWorker.swift; sourceTree = "<group>"; };
+		85020EAF24BC0ABA004440D1 /* StreamProgressPTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamProgressPTO.swift; sourceTree = "<group>"; };
+		85020EB124BC0ABA004440D1 /* AudioDiskEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioDiskEngine.swift; sourceTree = "<group>"; };
+		85020EB224BC0ABA004440D1 /* AudioStreamEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioStreamEngine.swift; sourceTree = "<group>"; };
+		85020EB424BC0ABA004440D1 /* AudioConverterListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioConverterListener.swift; sourceTree = "<group>"; };
+		85020EB524BC0ABA004440D1 /* AudioConverterErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioConverterErrors.swift; sourceTree = "<group>"; };
+		85020EB624BC0ABA004440D1 /* AudioConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioConverter.swift; sourceTree = "<group>"; };
+		85020EB724BC0ABA004440D1 /* SAAudioAvailabilityRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAAudioAvailabilityRange.swift; sourceTree = "<group>"; };
+		85020EB824BC0ABA004440D1 /* SAPlayingStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAPlayingStatus.swift; sourceTree = "<group>"; };
+		85020EBA24BC0ABA004440D1 /* AudioParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioParser.swift; sourceTree = "<group>"; };
+		85020EBB24BC0ABA004440D1 /* AudioParsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioParsable.swift; sourceTree = "<group>"; };
+		85020EBC24BC0ABA004440D1 /* AudioParserPropertyListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioParserPropertyListener.swift; sourceTree = "<group>"; };
+		85020EBD24BC0ABA004440D1 /* AudioParserPacketListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioParserPacketListener.swift; sourceTree = "<group>"; };
+		85020EBE24BC0ABA004440D1 /* AudioParserErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioParserErrors.swift; sourceTree = "<group>"; };
+		85020EBF24BC0ABA004440D1 /* AudioThrottler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioThrottler.swift; sourceTree = "<group>"; };
+		85020EC024BC0ABA004440D1 /* AudioEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
+		85020EC124BC0ABA004440D1 /* SAPlayerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAPlayerPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +126,7 @@
 		85020E8124BC0497004440D1 /* audio-demo */ = {
 			isa = PBXGroup;
 			children = (
+				85020E9624BC0ABA004440D1 /* vender */,
 				85020E8224BC0497004440D1 /* AppDelegate.swift */,
 				85020E8424BC0497004440D1 /* SceneDelegate.swift */,
 				85020E8624BC0497004440D1 /* ContentView.swift */,
@@ -73,6 +144,112 @@
 				85020E8B24BC0499004440D1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		85020E9624BC0ABA004440D1 /* vender */ = {
+			isa = PBXGroup;
+			children = (
+				85020E9724BC0ABA004440D1 /* AudioPlayer */,
+			);
+			path = vender;
+			sourceTree = "<group>";
+		};
+		85020E9724BC0ABA004440D1 /* AudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				85020E9824BC0ABA004440D1 /* AudioClockDirector.swift */,
+				85020E9924BC0ABA004440D1 /* SAPlayer.swift */,
+				85020E9A24BC0ABA004440D1 /* DownloadProgressDirector.swift */,
+				85020E9B24BC0ABA004440D1 /* Util */,
+				85020EA224BC0ABA004440D1 /* SALockScreenInfo.swift */,
+				85020EA324BC0ABA004440D1 /* SAPlayerUpdateSubscription.swift */,
+				85020EA424BC0ABA004440D1 /* SAPlayerDownloader.swift */,
+				85020EA524BC0ABA004440D1 /* SAPlayerDelegate.swift */,
+				85020EA624BC0ABA004440D1 /* LockScreenViewProtocol.swift */,
+				85020EA724BC0ABA004440D1 /* Model */,
+				85020EB024BC0ABA004440D1 /* Engine */,
+				85020EC124BC0ABA004440D1 /* SAPlayerPresenter.swift */,
+			);
+			path = AudioPlayer;
+			sourceTree = "<group>";
+		};
+		85020E9B24BC0ABA004440D1 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				85020E9C24BC0ABA004440D1 /* Constants.swift */,
+				85020E9D24BC0ABA004440D1 /* Date.swift */,
+				85020E9E24BC0ABA004440D1 /* Log.swift */,
+				85020E9F24BC0ABA004440D1 /* Data.swift */,
+				85020EA024BC0ABA004440D1 /* DirectorThreadSafeClosures.swift */,
+				85020EA124BC0ABA004440D1 /* URL.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		85020EA724BC0ABA004440D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				85020EA824BC0ABA004440D1 /* AudioDataManager.swift */,
+				85020EA924BC0ABA004440D1 /* Streaming */,
+				85020EAC24BC0ABA004440D1 /* Downloading */,
+				85020EAF24BC0ABA004440D1 /* StreamProgressPTO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		85020EA924BC0ABA004440D1 /* Streaming */ = {
+			isa = PBXGroup;
+			children = (
+				85020EAA24BC0ABA004440D1 /* AudioStreamWorker.swift */,
+				85020EAB24BC0ABA004440D1 /* StreamProgressDTO.swift */,
+			);
+			path = Streaming;
+			sourceTree = "<group>";
+		};
+		85020EAC24BC0ABA004440D1 /* Downloading */ = {
+			isa = PBXGroup;
+			children = (
+				85020EAD24BC0ABA004440D1 /* FileStorage.swift */,
+				85020EAE24BC0ABA004440D1 /* AudioDownloadWorker.swift */,
+			);
+			path = Downloading;
+			sourceTree = "<group>";
+		};
+		85020EB024BC0ABA004440D1 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				85020EB124BC0ABA004440D1 /* AudioDiskEngine.swift */,
+				85020EB224BC0ABA004440D1 /* AudioStreamEngine.swift */,
+				85020EB324BC0ABA004440D1 /* Converter */,
+				85020EB724BC0ABA004440D1 /* SAAudioAvailabilityRange.swift */,
+				85020EB824BC0ABA004440D1 /* SAPlayingStatus.swift */,
+				85020EB924BC0ABA004440D1 /* Parser */,
+				85020EBF24BC0ABA004440D1 /* AudioThrottler.swift */,
+				85020EC024BC0ABA004440D1 /* AudioEngine.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		85020EB324BC0ABA004440D1 /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				85020EB424BC0ABA004440D1 /* AudioConverterListener.swift */,
+				85020EB524BC0ABA004440D1 /* AudioConverterErrors.swift */,
+				85020EB624BC0ABA004440D1 /* AudioConverter.swift */,
+			);
+			path = Converter;
+			sourceTree = "<group>";
+		};
+		85020EB924BC0ABA004440D1 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				85020EBA24BC0ABA004440D1 /* AudioParser.swift */,
+				85020EBB24BC0ABA004440D1 /* AudioParsable.swift */,
+				85020EBC24BC0ABA004440D1 /* AudioParserPropertyListener.swift */,
+				85020EBD24BC0ABA004440D1 /* AudioParserPacketListener.swift */,
+				85020EBE24BC0ABA004440D1 /* AudioParserErrors.swift */,
+			);
+			path = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +324,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				85020E8324BC0497004440D1 /* AppDelegate.swift in Sources */,
+				85020EDA24BC0ABA004440D1 /* AudioConverter.swift in Sources */,
+				85020ECB24BC0ABA004440D1 /* SALockScreenInfo.swift in Sources */,
+				85020EC824BC0ABA004440D1 /* Data.swift in Sources */,
+				85020EC224BC0ABA004440D1 /* AudioClockDirector.swift in Sources */,
+				85020EC724BC0ABA004440D1 /* Log.swift in Sources */,
+				85020ED324BC0ABA004440D1 /* FileStorage.swift in Sources */,
 				85020E8524BC0497004440D1 /* SceneDelegate.swift in Sources */,
+				85020EDD24BC0ABA004440D1 /* AudioParser.swift in Sources */,
+				85020EE424BC0ABA004440D1 /* SAPlayerPresenter.swift in Sources */,
+				85020ECC24BC0ABA004440D1 /* SAPlayerUpdateSubscription.swift in Sources */,
+				85020EDE24BC0ABA004440D1 /* AudioParsable.swift in Sources */,
+				85020ED924BC0ABA004440D1 /* AudioConverterErrors.swift in Sources */,
+				85020EDC24BC0ABA004440D1 /* SAPlayingStatus.swift in Sources */,
+				85020ED124BC0ABA004440D1 /* AudioStreamWorker.swift in Sources */,
+				85020EC624BC0ABA004440D1 /* Date.swift in Sources */,
+				85020ED524BC0ABA004440D1 /* StreamProgressPTO.swift in Sources */,
+				85020ECF24BC0ABA004440D1 /* LockScreenViewProtocol.swift in Sources */,
+				85020ED224BC0ABA004440D1 /* StreamProgressDTO.swift in Sources */,
+				85020EDB24BC0ABA004440D1 /* SAAudioAvailabilityRange.swift in Sources */,
+				85020EC324BC0ABA004440D1 /* SAPlayer.swift in Sources */,
+				85020EE324BC0ABA004440D1 /* AudioEngine.swift in Sources */,
+				85020ED724BC0ABA004440D1 /* AudioStreamEngine.swift in Sources */,
+				85020EE024BC0ABA004440D1 /* AudioParserPacketListener.swift in Sources */,
+				85020EC524BC0ABA004440D1 /* Constants.swift in Sources */,
+				85020EC424BC0ABA004440D1 /* DownloadProgressDirector.swift in Sources */,
+				85020EC924BC0ABA004440D1 /* DirectorThreadSafeClosures.swift in Sources */,
+				85020EE224BC0ABA004440D1 /* AudioThrottler.swift in Sources */,
+				85020ECD24BC0ABA004440D1 /* SAPlayerDownloader.swift in Sources */,
+				85020ECE24BC0ABA004440D1 /* SAPlayerDelegate.swift in Sources */,
+				85020ED624BC0ABA004440D1 /* AudioDiskEngine.swift in Sources */,
+				85020EDF24BC0ABA004440D1 /* AudioParserPropertyListener.swift in Sources */,
+				85020ED824BC0ABA004440D1 /* AudioConverterListener.swift in Sources */,
+				85020ED424BC0ABA004440D1 /* AudioDownloadWorker.swift in Sources */,
 				85020E8724BC0497004440D1 /* ContentView.swift in Sources */,
+				85020ED024BC0ABA004440D1 /* AudioDataManager.swift in Sources */,
+				85020ECA24BC0ABA004440D1 /* URL.swift in Sources */,
+				85020EE124BC0ABA004440D1 /* AudioParserErrors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
