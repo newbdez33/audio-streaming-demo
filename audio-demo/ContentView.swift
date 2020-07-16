@@ -42,7 +42,7 @@ struct ProgressBar: View {
 }
 
 struct ContentView: View {
-    @State private var url = "https://mcdn.podbean.com/mf/download/l07zlc/GreenSlimeFinal.mp3"
+    @State private var url = "https://mcdn.podbean.com/mf/web/g9swyq/live_20200521_193712_original_92s72.m4a"
     @State private var silences = false
     @State private var eq = false
     

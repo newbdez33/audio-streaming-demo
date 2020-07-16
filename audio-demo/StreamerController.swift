@@ -78,4 +78,8 @@ class StreamerController: ObservableObject, StreamingDelegate {
             //os_log("Failed to activate audio session: %@", log: ViewController.logger, type: .default, #function, #line, error.localizedDescription)
         }
     }
+    
+    func streamerDidFinishPlaying(_ streamer: Streaming) {
+        print("Did finished streaming")
+    }
 }
