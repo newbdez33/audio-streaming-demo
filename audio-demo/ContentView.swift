@@ -52,7 +52,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Audio streaming player Demo")
+            Text("Audio streaming player demo")
                 .font(.headline)
             HStack {
                 TextField("URL", text: $url)
