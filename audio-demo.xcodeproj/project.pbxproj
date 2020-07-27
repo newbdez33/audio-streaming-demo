@@ -13,11 +13,12 @@
 		85020E8924BC0499004440D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85020E8824BC0499004440D1 /* Assets.xcassets */; };
 		85020E8C24BC0499004440D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85020E8B24BC0499004440D1 /* Preview Assets.xcassets */; };
 		85020E8F24BC0499004440D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85020E8D24BC0499004440D1 /* LaunchScreen.storyboard */; };
+		8565B05B24CBE12F003E6979 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8565B05A24CBE12F003E6979 /* Queue.swift */; };
 		857ABD5324BEF185004618DC /* TimeInterval+MMSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ABD3824BEF185004618DC /* TimeInterval+MMSS.swift */; };
 		857ABD5424BEF185004618DC /* ProgressSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ABD3924BEF185004618DC /* ProgressSlider.swift */; };
 		857ABD5524BEF185004618DC /* StreamingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ABD3B24BEF185004618DC /* StreamingDelegate.swift */; };
 		857ABD5624BEF185004618DC /* Streaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ABD3C24BEF185004618DC /* Streaming.swift */; };
-		857ABD5724BEF185004618DC /* Streamer+DownloadableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ABD3D24BEF185004618DC /* Streamer+DownloadableDelegate.swift */; };
+		857ABD5724BEF185004618DC /* Streamer+FileDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ABD3D24BEF185004618DC /* Streamer+FileDelegate.swift */; };
 		857ABD5824BEF185004618DC /* StreamingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ABD3E24BEF185004618DC /* StreamingState.swift */; };
 		857ABD5924BEF185004618DC /* Streamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ABD3F24BEF185004618DC /* Streamer.swift */; };
 		857ABD5A24BEF185004618DC /* Parser+PropertyListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ABD4124BEF185004618DC /* Parser+PropertyListener.swift */; };
@@ -35,6 +36,11 @@
 		857ABD6624BEF185004618DC /* Downloader+URLSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ABD5024BEF185004618DC /* Downloader+URLSessionDelegate.swift */; };
 		857ABD6724BEF185004618DC /* DownloadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ABD5124BEF185004618DC /* DownloadingState.swift */; };
 		857ABD6824BEF185004618DC /* DownloadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ABD5224BEF185004618DC /* DownloadingDelegate.swift */; };
+		85A0C57B24C92ACD0040A0DE /* Filing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A0C57A24C92ACD0040A0DE /* Filing.swift */; };
+		85A0C57D24C92B130040A0DE /* FilingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A0C57C24C92B130040A0DE /* FilingDelegate.swift */; };
+		85A0C57F24C92B5D0040A0DE /* FilingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A0C57E24C92B5D0040A0DE /* FilingState.swift */; };
+		85A0C58124C92BD70040A0DE /* Filer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A0C58024C92BD70040A0DE /* Filer.swift */; };
+		85A0C58324C932410040A0DE /* Filer+DownloadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A0C58224C932410040A0DE /* Filer+DownloadingDelegate.swift */; };
 		85A5E4FF24BDC1D600198394 /* PodbeanStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A5E4FE24BDC1D600198394 /* PodbeanStreamer.swift */; };
 		85A5E50124BDC22F00198394 /* StreamerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A5E50024BDC22F00198394 /* StreamerController.swift */; };
 /* End PBXBuildFile section */
@@ -48,11 +54,12 @@
 		85020E8B24BC0499004440D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85020E8E24BC0499004440D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85020E9024BC0499004440D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8565B05A24CBE12F003E6979 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		857ABD3824BEF185004618DC /* TimeInterval+MMSS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+MMSS.swift"; sourceTree = "<group>"; };
 		857ABD3924BEF185004618DC /* ProgressSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressSlider.swift; sourceTree = "<group>"; };
 		857ABD3B24BEF185004618DC /* StreamingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingDelegate.swift; sourceTree = "<group>"; };
 		857ABD3C24BEF185004618DC /* Streaming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Streaming.swift; sourceTree = "<group>"; };
-		857ABD3D24BEF185004618DC /* Streamer+DownloadableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Streamer+DownloadableDelegate.swift"; sourceTree = "<group>"; };
+		857ABD3D24BEF185004618DC /* Streamer+FileDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Streamer+FileDelegate.swift"; sourceTree = "<group>"; };
 		857ABD3E24BEF185004618DC /* StreamingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingState.swift; sourceTree = "<group>"; };
 		857ABD3F24BEF185004618DC /* Streamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Streamer.swift; sourceTree = "<group>"; };
 		857ABD4124BEF185004618DC /* Parser+PropertyListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Parser+PropertyListener.swift"; sourceTree = "<group>"; };
@@ -70,6 +77,11 @@
 		857ABD5024BEF185004618DC /* Downloader+URLSessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Downloader+URLSessionDelegate.swift"; sourceTree = "<group>"; };
 		857ABD5124BEF185004618DC /* DownloadingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadingState.swift; sourceTree = "<group>"; };
 		857ABD5224BEF185004618DC /* DownloadingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadingDelegate.swift; sourceTree = "<group>"; };
+		85A0C57A24C92ACD0040A0DE /* Filing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filing.swift; sourceTree = "<group>"; };
+		85A0C57C24C92B130040A0DE /* FilingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilingDelegate.swift; sourceTree = "<group>"; };
+		85A0C57E24C92B5D0040A0DE /* FilingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilingState.swift; sourceTree = "<group>"; };
+		85A0C58024C92BD70040A0DE /* Filer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filer.swift; sourceTree = "<group>"; };
+		85A0C58224C932410040A0DE /* Filer+DownloadingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Filer+DownloadingDelegate.swift"; sourceTree = "<group>"; };
 		85A5E4FE24BDC1D600198394 /* PodbeanStreamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PodbeanStreamer.swift; path = "audio-demo/PodbeanStreamer.swift"; sourceTree = SOURCE_ROOT; };
 		85A5E50024BDC22F00198394 /* StreamerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +149,7 @@
 		857ABD3624BEF185004618DC /* AudioStreamer */ = {
 			isa = PBXGroup;
 			children = (
+				85A0C57924C928AD0040A0DE /* File */,
 				857ABD3724BEF185004618DC /* UI */,
 				857ABD3A24BEF185004618DC /* Stream */,
 				857ABD4024BEF185004618DC /* Parse */,
@@ -161,7 +174,7 @@
 			children = (
 				857ABD3B24BEF185004618DC /* StreamingDelegate.swift */,
 				857ABD3C24BEF185004618DC /* Streaming.swift */,
-				857ABD3D24BEF185004618DC /* Streamer+DownloadableDelegate.swift */,
+				857ABD3D24BEF185004618DC /* Streamer+FileDelegate.swift */,
 				857ABD3E24BEF185004618DC /* StreamingState.swift */,
 				857ABD3F24BEF185004618DC /* Streamer.swift */,
 			);
@@ -195,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				857ABD4C24BEF185004618DC /* AudioStreamerTimer.swift */,
+				8565B05A24CBE12F003E6979 /* Queue.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -209,6 +223,18 @@
 				857ABD5224BEF185004618DC /* DownloadingDelegate.swift */,
 			);
 			path = Download;
+			sourceTree = "<group>";
+		};
+		85A0C57924C928AD0040A0DE /* File */ = {
+			isa = PBXGroup;
+			children = (
+				85A0C57A24C92ACD0040A0DE /* Filing.swift */,
+				85A0C57C24C92B130040A0DE /* FilingDelegate.swift */,
+				85A0C57E24C92B5D0040A0DE /* FilingState.swift */,
+				85A0C58024C92BD70040A0DE /* Filer.swift */,
+				85A0C58224C932410040A0DE /* Filer+DownloadingDelegate.swift */,
+			);
+			path = File;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,12 +310,15 @@
 			files = (
 				857ABD5424BEF185004618DC /* ProgressSlider.swift in Sources */,
 				857ABD6124BEF185004618DC /* ReaderError.swift in Sources */,
+				85A0C57D24C92B130040A0DE /* FilingDelegate.swift in Sources */,
 				857ABD6524BEF185004618DC /* Downloader.swift in Sources */,
+				85A0C57F24C92B5D0040A0DE /* FilingState.swift in Sources */,
 				857ABD6224BEF185004618DC /* Reader+Converter.swift in Sources */,
 				85020E8324BC0497004440D1 /* AppDelegate.swift in Sources */,
 				857ABD5324BEF185004618DC /* TimeInterval+MMSS.swift in Sources */,
+				85A0C58324C932410040A0DE /* Filer+DownloadingDelegate.swift in Sources */,
 				857ABD5B24BEF185004618DC /* ParserError.swift in Sources */,
-				857ABD5724BEF185004618DC /* Streamer+DownloadableDelegate.swift in Sources */,
+				857ABD5724BEF185004618DC /* Streamer+FileDelegate.swift in Sources */,
 				857ABD5C24BEF185004618DC /* Parser+Packets.swift in Sources */,
 				857ABD6624BEF185004618DC /* Downloader+URLSessionDelegate.swift in Sources */,
 				85A5E4FF24BDC1D600198394 /* PodbeanStreamer.swift in Sources */,
@@ -298,12 +327,15 @@
 				857ABD6324BEF185004618DC /* AudioStreamerTimer.swift in Sources */,
 				85A5E50124BDC22F00198394 /* StreamerController.swift in Sources */,
 				857ABD5924BEF185004618DC /* Streamer.swift in Sources */,
+				85A0C57B24C92ACD0040A0DE /* Filing.swift in Sources */,
 				85020E8724BC0497004440D1 /* ContentView.swift in Sources */,
 				857ABD6824BEF185004618DC /* DownloadingDelegate.swift in Sources */,
 				857ABD5F24BEF185004618DC /* Reader.swift in Sources */,
 				857ABD5D24BEF185004618DC /* Parsing.swift in Sources */,
 				857ABD6024BEF185004618DC /* Reading.swift in Sources */,
+				8565B05B24CBE12F003E6979 /* Queue.swift in Sources */,
 				857ABD5A24BEF185004618DC /* Parser+PropertyListener.swift in Sources */,
+				85A0C58124C92BD70040A0DE /* Filer.swift in Sources */,
 				857ABD5624BEF185004618DC /* Streaming.swift in Sources */,
 				857ABD6724BEF185004618DC /* DownloadingState.swift in Sources */,
 				857ABD5E24BEF185004618DC /* Parser.swift in Sources */,

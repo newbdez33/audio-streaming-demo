@@ -24,10 +24,10 @@ open class Streamer: Streaming {
     }
     public weak var delegate: StreamingDelegate?
     public internal(set) var duration: TimeInterval?
-    public lazy var downloader: Downloading = {
-        let downloader = Downloader()
-        downloader.setDelegate(self)
-        return downloader
+    public lazy var filer: Filing = {
+        let filer = Filer()
+        filer.setDelegate(self)
+        return filer
     }()
     public internal(set) var parser: Parsing?
     public internal(set) var reader: Reading?
@@ -43,8 +43,8 @@ open class Streamer: Streaming {
             reset()
 
             if let url = url {
-                downloader.url = url
-                downloader.start()
+                filer.url = url
+                filer.start()
             }
         }
     }
@@ -105,6 +105,15 @@ open class Streamer: Streaming {
             self?.notifyTimeUpdated()
         }
         RunLoop.current.add(timer, forMode: .common)
+        
+        let queue = DispatchQueue(label: "work-queue")
+        queue.async {
+            while true {
+                self.preparePackets()
+                Thread.sleep(forTimeInterval: 0.05)
+            }
+        }
+        
     }
 
     /// Subclass can override this to attach additional nodes to the engine before it is prepared. Default implementation attaches the `playerNode`. Subclass should call super or be sure to attach the playerNode.
@@ -123,10 +132,10 @@ open class Streamer: Streaming {
         // Reset the playback state
         stop()
 
-        downloader.setDelegate(nil)
-        downloader.stop()
-        downloader = Downloader()
-        downloader.setDelegate(self)
+        filer.setDelegate(nil)
+        filer.stop()
+        filer = Filer()
+        filer.setDelegate(self)
 
         duration = nil
         reader = nil
@@ -193,7 +202,7 @@ open class Streamer: Streaming {
     
     public func stop() {
         // Stop the downloader, the player node, and the engine
-        downloader.stop()
+        filer.stop()
         playerNode.stop()
         engine.stop()
         
@@ -265,6 +274,7 @@ open class Streamer: Streaming {
     // MARK: - Scheduling Buffers
 
     func scheduleNextBuffer() {
+        
         guard let reader = reader else {
             return
         }
@@ -279,6 +289,49 @@ open class Streamer: Streaming {
         } catch ReaderError.reachedEndOfFile {
             isFileSchedulingComplete = true
         } catch {
+            print("scheduled buffer:\(error)")
+        }
+    }
+    
+    func preparePackets() {
+        guard let parser = parser else {
+            return
+        }
+        
+        //check if we need more packet
+        if parser.bufferedSeconds() > 60 {
+            return
+        }
+        
+        do {
+            //if there not enough data in queue then read range data from file, append to queue. parser will read from queue.
+            //downloaded data
+            if let data = filer.getData() {
+                try parser.parse(data: data)
+            }
+            
+        } catch {
+            print("parse data error:\(error)")
+        }
+        
+        /// Once there's enough data to start producing packets we can use the data format
+        if reader == nil, let _ = parser.dataFormat {
+            do {
+                reader = try Reader(parser: parser, readFormat: readFormat)
+            } catch {
+                print("create reader failed")
+            }
+        }
+        
+        /// Update the progress UI
+        DispatchQueue.main.async {
+            [weak self] in
+            
+            // Notify the delegate of the new progress value of the download
+            //self?.notifyDownloadProgress(progress)
+            
+            // Check if we have the duration
+            self?.handleDurationUpdate()
         }
     }
 
@@ -345,4 +398,28 @@ open class Streamer: Streaming {
 
         delegate?.streamer(self, updatedCurrentTime: currentTime)
     }
+    
+    // MARK: - throttling
+//    func throttling() {
+//
+//        guard let frameOffset = parser?.frameOffset(forTime: TimeInterval(60)),
+//            let packetOffset = parser?.packetOffset(forFrame: frameOffset) else {
+//                return
+//        }
+//        let downloaded = (parser as! Parser).packetsCount
+//        let current = reader?.currentPacket ?? 0
+//        if ( UInt32(downloaded) - current > packetOffset ) {
+//            if filer.state == .started {
+//                filer.pause()
+//                print("pause downloading")
+//            }
+//        }else {
+//            if filer.state == .paused {
+//                filer.start()
+//                print("start downloading")
+//            }
+//        }
+//
+//        //print("60sec:\(packetOffset), current:\(reader?.currentPacket ?? 0), downloaded:\( (parser as! Parser).packetsCount ), total:\( (parser as! Parser).packetCount )")
+//    }
 }

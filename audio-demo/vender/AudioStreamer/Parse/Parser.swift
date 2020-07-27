@@ -61,16 +61,20 @@ public class Parser: Parsing {
     }
 
     // MARK: - Methods
+    public func bufferedSeconds() -> Int {
+        return 0
+    }
 
     public func appendPacket(data: Data, description: AudioStreamPacketDescription?) {
         objc_sync_enter(self)
-        packets.append((data, description))
+        let item = (data, description)
+        packets.enqueue(item)
         objc_sync_exit(self)
     }
 
-    public func packet(at index: Int) -> (Data, AudioStreamPacketDescription?) {
+    public func getPacket() -> (Data, AudioStreamPacketDescription?) {
         objc_sync_enter(self)
-        let result = packets[index]
+        let result = packets.dequeue()!
         objc_sync_exit(self)
         return result
     }
@@ -102,5 +106,5 @@ public class Parser: Parsing {
 //        
 //    }
 
-    private var packets = [(Data, AudioStreamPacketDescription?)]()
+    private var packets = Queue<(Data, AudioStreamPacketDescription?)>()
 }

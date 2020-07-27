@@ -52,7 +52,7 @@ func ReaderConverterCallback(_ converter: AudioConverterRef,
     //
     // Copy data over (note we've only processing a single packet of data at a time)
     //
-    let packet = parser.packet(at: packetIndex)
+    let packet = parser.getPacket()
     var data = packet.0
     let dataCount = data.count
     ioData.pointee.mNumberBuffers = 1

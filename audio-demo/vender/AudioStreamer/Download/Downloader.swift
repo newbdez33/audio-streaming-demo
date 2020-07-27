@@ -35,7 +35,7 @@ public class Downloader: NSObject, Downloading {
     fileprivate var task: URLSessionDataTask?
     
     /// A `Int64` representing the total amount of bytes received
-    var totalBytesReceived: Int64 = 0
+    public var totalBytesReceived: Int64 = 0
     
     /// A `Int64` representing the total amount of bytes for the entire file
     var totalBytesCount: Int64 = 0

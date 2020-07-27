@@ -12,6 +12,8 @@ import os.log
 extension Downloader: URLSessionDataDelegate {
     public func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive response: URLResponse, completionHandler: @escaping (URLSession.ResponseDisposition) -> Void) {
         totalBytesCount = response.expectedContentLength
+        //TODO create a empty cache file for the file to be downloaded
+        getDelegate()?.download(self, expectedContentLength: totalBytesCount)
         completionHandler(.allow)
     }
 

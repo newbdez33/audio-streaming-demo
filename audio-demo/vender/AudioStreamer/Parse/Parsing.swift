@@ -25,7 +25,9 @@ public protocol Parsing: class {
     
     /// An array of duples, each index presenting a parsed audio packet. For compressed formats each packet of data should contain a `AudioStreamPacketDescription`, which describes the start offset and length of the audio data)
     var packetsCount: Int { get }
-    func packet(at index: Int) -> (Data, AudioStreamPacketDescription?)
+    func getPacket() -> (Data, AudioStreamPacketDescription?)
+    
+    func bufferedSeconds() -> Int
 
     /// The total number of frames (expressed in the data format)
     var totalFrameCount: AVAudioFrameCount? { get }

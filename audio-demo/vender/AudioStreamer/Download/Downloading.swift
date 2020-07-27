@@ -12,6 +12,7 @@ import Foundation
 public protocol Downloading: class {
     
     // MARK: - Properties
+    var totalBytesReceived: Int64 { get }
     
     /// A receiver implementing the `DownloadingDelegate` to receive state change, completion, and progress events from the `Downloading` instance.
     func getDelegate() -> DownloadingDelegate?

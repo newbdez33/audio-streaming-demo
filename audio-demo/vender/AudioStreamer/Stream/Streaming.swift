@@ -23,8 +23,8 @@ public protocol Streaming: class {
     /// A `TimeInterval` representing the total duration
     var duration: TimeInterval? { get }
     
-    /// A `Downloading` used to download the audio's binary data
-    var downloader: Downloading { get }
+    /// A `Filing` used to fetch the audio's binary data
+    var filer: Filing { get }
     
     /// A `Parsing` used to parse the audio's binary data into audio packets
     var parser: Parsing? { get }
