@@ -24,10 +24,11 @@ public protocol Parsing: class {
     var isParsingComplete: Bool { get }
     
     /// An array of duples, each index presenting a parsed audio packet. For compressed formats each packet of data should contain a `AudioStreamPacketDescription`, which describes the start offset and length of the audio data)
-    var packetsCount: Int { get }
+    var currentPacketsCount: UInt64 { get }
+    func cachedPacketsCount() -> Int
     func getPacket() -> (Data, AudioStreamPacketDescription?)
     
-    func bufferedSeconds() -> Int
+    func bufferedSeconds() -> TimeInterval
 
     /// The total number of frames (expressed in the data format)
     var totalFrameCount: AVAudioFrameCount? { get }
@@ -94,7 +95,7 @@ extension Parsing {
             return false
         }
         
-        return packetsCount == totalPacketCount
+        return currentPacketsCount == totalPacketCount
     }
     
     public func frameOffset(forTime time: TimeInterval) -> AVAudioFramePosition? {
@@ -114,6 +115,13 @@ extension Parsing {
         }
         
         return AVAudioPacketCount(frame) / AVAudioPacketCount(framesPerPacket)
+    }
+    
+    public func frameOffset(forPacket packet: UInt64) -> AVAudioFramePosition? {
+        guard let framesPerPacket = dataFormat?.streamDescription.pointee.mFramesPerPacket else {
+            return nil
+        }
+        return AVAudioFramePosition(packet * UInt64(framesPerPacket))
     }
     
     public func timeOffset(forFrame frame: AVAudioFrameCount) -> TimeInterval? {

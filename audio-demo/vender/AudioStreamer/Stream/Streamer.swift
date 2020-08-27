@@ -299,7 +299,8 @@ open class Streamer: Streaming {
         }
         
         //check if we need more packet
-        if parser.bufferedSeconds() > 60 {
+        if let currentTime = currentTime, parser.bufferedSeconds() - currentTime > 20 {
+            //TODO stop downloader here.
             return
         }
         
@@ -361,7 +362,7 @@ open class Streamer: Streaming {
         guard let currentTime = currentTime, let duration = duration else {
             return
         }
-
+        
         if currentTime >= duration {
             try? seek(to: 0)
             pause()

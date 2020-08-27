@@ -11,24 +11,25 @@ import AVFoundation
 import os.log
 
 /// The `Parser` is a concrete implementation of the `Parsing` protocol used to convert binary data into audio packet data. This class uses the Audio File Stream Services to progressively parse the properties and packets of the incoming audio data.
-public class Parser: Parsing {    
+public class Parser: Parsing {
+    
     // MARK: - Parsing props
     
     public internal(set) var dataFormat: AVAudioFormat?
 
-    public var packetsCount: Int {
-        objc_sync_enter(self)
-        let result = packets.count
-        objc_sync_exit(self)
-        return result
-    }
+//    public var packetsCount: Int {
+//        objc_sync_enter(self)
+//        let result = packets.count
+//        objc_sync_exit(self)
+//        return result
+//    }
 
     public var totalPacketCount: AVAudioPacketCount? {
         guard let _ = dataFormat else {
             return nil
         }
         
-        return max(AVAudioPacketCount(packetCount), AVAudioPacketCount(packetsCount))
+        return max(AVAudioPacketCount(packetCount), AVAudioPacketCount(currentPacketsCount)) //AVAudioPacketCount(packetsCount)
     }
     
     // MARK: - Properties
@@ -61,15 +62,24 @@ public class Parser: Parsing {
     }
 
     // MARK: - Methods
-    public func bufferedSeconds() -> Int {
-        return 0
+    public func bufferedSeconds() -> TimeInterval {
+        guard let frameOffset = frameOffset(forPacket: currentPacketsCount),
+            let seconds = timeOffset(forFrame: AVAudioFrameCount(frameOffset)) else {
+                return 0
+        }
+        return TimeInterval(seconds)
     }
 
     public func appendPacket(data: Data, description: AudioStreamPacketDescription?) {
         objc_sync_enter(self)
         let item = (data, description)
         packets.enqueue(item)
+        currentPacketsCount = currentPacketsCount + 1
         objc_sync_exit(self)
+    }
+    
+    public func cachedPacketsCount() -> Int {
+        return packets.count
     }
 
     public func getPacket() -> (Data, AudioStreamPacketDescription?) {
@@ -107,4 +117,5 @@ public class Parser: Parsing {
 //    }
 
     private var packets = Queue<(Data, AudioStreamPacketDescription?)>()
+    public var currentPacketsCount:UInt64 = 0
 }

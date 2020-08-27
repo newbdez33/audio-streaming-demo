@@ -88,7 +88,7 @@ public class Filer: NSObject, Filing {
         }
         
         do {
-            let c = 15000
+            let c = 250000
             let offset = try fileReader.offset()
             //print("read offet:\(offset)")
             if offset + UInt64(c) > downloader.totalBytesReceived {

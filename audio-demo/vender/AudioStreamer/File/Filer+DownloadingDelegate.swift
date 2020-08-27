@@ -26,7 +26,7 @@ extension Filer: DownloadingDelegate {
         //TODO write received data to file
         if FileManager.default.fileExists(atPath: localFilePath) {
             fileHandler?.write(data)
-            print("\(fileHandler?.offsetInFile ?? 0), \(progress)")
+            //print("\(fileHandler?.offsetInFile ?? 0), \(progress)")
             
             getDelegate()?.file(self, didReceiveData: data, progress: progress)
         }else {
