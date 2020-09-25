@@ -88,20 +88,40 @@ public class Filer: NSObject, Filing {
         }
         
         do {
-            let c = 250000
             let offset = try fileReader.offset()
+            var c = 21000  //chunk is 21000
+            if ( offset == 0 && getFileType() == "m4a" ) {
+                c = 552000  //first chunk for m4a
+            }
             //print("read offet:\(offset)")
-            if offset + UInt64(c) > downloader.totalBytesReceived {
-                print("no enough cache")
+            if offset + UInt64(c) > downloader.totalBytesReceived { //TODO here we should make sure the downloaded content is written in file already.
+                print("audio data is not ready")
                 return nil
             }
-            let data = try fileReader.read(upToCount: c)
+            guard let data = try fileReader.read(upToCount: c) else {
+                return nil
+            }
+            if ( offset == 0 && getFileType() == "m4a" && foundM4aAtomData(data) == false ) {
+                print("detected not optimized m4a file.")
+                return nil
+            }
             fileReader.seek(toFileOffset: offset + UInt64(c))
             return data
         }catch {
             print("reading file exception")
             return nil
         }
+    }
+    
+    private func getFileType() -> String {
+        let t = url?.pathExtension ?? "unknown"
+        return t.lowercased()
+    }
+    
+    private func foundM4aAtomData(_ data:Data) -> Bool {
+        //First check atom field is filled return true.
+        //Otherwise check if data includs atom mdat then return true.
+        return true
     }
 
     private weak var delegate: FilingDelegate?
